@@ -108,5 +108,13 @@ class GolosinaBañada {
 }
 
 class Pastilla {
+  method peso() = 5 
   const sabores = ["Frutilla" , "Chocolate" , "Naranja" , "Frutilla"]
+  var saborActual = 0
+  var property contieneGluten
+  method sabor() {sabores.get(saborActual % 3)} 
+  method precio() = if( not contieneGluten) 7 else 10
+  method recibirMordisco() {
+    saborActual += 1
+  }
 }
